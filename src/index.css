@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-brand-tan: #E9D5C3;
+  --color-brand-teal: #42BBAA;
+  --color-brand-yellow: #FCD95B;
+  --color-brand-orange: #FF8A50;
+  --color-brand-blue: #2EA9E0;
+  --color-brand-green: #A3D2A2;
+  --color-brand-bg: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-zinc-900 bg-white;
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "ss02", "cv01", "cv03";
+  }
+  
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .signature {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
